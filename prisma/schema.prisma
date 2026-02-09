@@ -22,7 +22,8 @@ model Map{
 
 model Coord {
   id             Int @id @default(autoincrement())
-  coordinate     Float  
+  x_coord        Float
+  y_coord        Float  
   character_name String
   map            Map @relation(fields: [map_id], references: [id])
   map_id         Int

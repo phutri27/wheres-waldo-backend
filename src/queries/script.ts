@@ -11,7 +11,8 @@ class Coords {
             },
             select:{
                 character_name: true,
-                coordinate: true
+                x_coord: true,
+                y_coord: true
             }
         })
 

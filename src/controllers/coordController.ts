@@ -3,13 +3,12 @@ import { coordObj } from "../queries/script.js"
 
 export const getCharacterForCoord = async (req: Request, res: Response) => {
     const map_id = Number(req.params.map_id)
-    const coord = Number(req.params.coord)
+    const x_coord = Number(req.params.x_coord)
+    const y_coord = Number(req.params.y_coord)
     const name = req.params.character_name as string
-
     try {
         const coordRes = await coordObj.getCoord(map_id, name)
-        const result = Math.abs(coord - (coordRes?.coordinate as number)) <= 0.2
-
+        const result = Math.abs(x_coord - (coordRes?.x_coord as number)) <= 4 && Math.abs(y_coord - (coordRes?.y_coord as number)) <= 4
         if (result){
             return res.status(200).json({
                 name: coordRes?.character_name,

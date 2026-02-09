@@ -14,6 +14,7 @@ export const addToScoreboard = async (req: Request, res: Response) => {
 }
 
 export const getScoreboard = async (req: Request, res: Response) => {
+    
     try {
         const id = Number(req.params.id)
         const result = await scoreboardObj.getScoreboard(id)
