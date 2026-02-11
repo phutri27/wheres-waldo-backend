@@ -26,6 +26,9 @@ class Scoreboard{
             where:{
                 map_id: map_id
             },
+            orderBy:{
+                score: "asc"
+            },
             select: {
                 username: true,
                 score: true
@@ -42,6 +45,18 @@ class Scoreboard{
                 score: score
             }
         })
+    }
+
+    async getUsername(username: string){
+        const result = await prisma.scoreboard.findUnique({
+            where:{
+                username: username
+            },
+            select:{
+                username: true
+            }
+        })
+        return result
     }
 }
 

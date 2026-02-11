@@ -16,7 +16,7 @@ export const getCharacterForCoord = async (req: Request, res: Response) => {
             })
         } else {
             return res.status(301).json({
-                message: "Wrong coordinates"
+                message: "Wrong!!! Try again"
             })
         }
     } catch (error) {
