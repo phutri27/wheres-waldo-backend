@@ -9,7 +9,7 @@ export const validateUsernane = [
     .notEmpty()
     .withMessage(`Username ${emptyMsg}`)
     .custom(async (value, {req}) => {
-        const result = await scoreboardObj.getUsername(value)
+        const result = await scoreboardObj.getUsername(value, Number(req.body.map_id))
         if (result){
             throw new Error("Username has been taken")
         }

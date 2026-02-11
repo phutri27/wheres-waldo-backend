@@ -47,10 +47,11 @@ class Scoreboard{
         })
     }
 
-    async getUsername(username: string){
+    async getUsername(username: string, map_id: number){
         const result = await prisma.scoreboard.findUnique({
             where:{
-                username: username
+                username: username,
+                map_id: map_id
             },
             select:{
                 username: true

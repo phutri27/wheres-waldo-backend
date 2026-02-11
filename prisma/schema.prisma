@@ -33,7 +33,7 @@ model Coord {
 
 model Scoreboard {
   id       Int @id @default(autoincrement())
-  username String @unique
+  username String 
   score    Int 
   map      Map @relation(fields: [map_id], references: [id]) 
   map_id   Int
