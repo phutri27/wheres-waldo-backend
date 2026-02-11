@@ -8,7 +8,7 @@ export const getCharacterForCoord = async (req: Request, res: Response) => {
     const name = req.params.character_name as string
     try {
         const coordRes = await coordObj.getCoord(map_id, name)
-        const result = Math.abs(x_coord - (coordRes?.x_coord as number)) <= 4 && Math.abs(y_coord - (coordRes?.y_coord as number)) <= 4
+        const result = Math.abs(x_coord - (coordRes?.x_coord as number)) <= 2.5 && Math.abs(y_coord - (coordRes?.y_coord as number)) <= 2.5
         if (result){
             return res.status(200).json({
                 name: coordRes?.character_name,
