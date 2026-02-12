@@ -1,6 +1,9 @@
 # Where's Waldo API 🕵️‍♂️
 The backend service for the "Where's Waldo" photo-tagging game. This API handles game initialization, coordinate validation (checking if a character was found), and managing the scoreboard.
 
+## Frontend repositories
+Click [here](https://github.com/phutri27/Wheres-waldo-frontend.git)
+
 ## 🛠 Tech Stack
 *   **Runtime**: Node.js
 *   **Framework**: Express.js
