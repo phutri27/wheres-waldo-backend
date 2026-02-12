@@ -6,7 +6,7 @@ The backend service for the "Where's Waldo" photo-tagging game. This API handles
 *   **Framework**: Express.js
 *   **Language**: TypeScript
 *   **ORM**: Prisma
-*   **Database**: PostgreSQL (Recommended) / SQLite (for dev)
+*   **Database**: PostgreSQL
 *   **Testing**: Vitest
 
 ## 🚀 Features
