@@ -4,7 +4,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "vitest"
+    "dev": "nodemon src/app.ts",
+    "build": "tsc",
+    "start": "node dist/src/app.js",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
   },
   "keywords": [],
   "author": "",
