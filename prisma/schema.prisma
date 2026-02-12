@@ -37,4 +37,6 @@ model Scoreboard {
   score    Int 
   map      Map @relation(fields: [map_id], references: [id]) 
   map_id   Int
+
+  @@unique(name: "uniqueName", [username, map_id])
 }
