@@ -1,4 +1,4 @@
-import { prisma } from "../lib/prisma";
+import { prisma } from "../lib/prisma.js";
 
 class Coords {
     async getCoord(map_id: number, character_name: string){

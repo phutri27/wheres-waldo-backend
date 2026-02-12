@@ -1,4 +1,4 @@
-import { Request, Response } from "express"
+import type{ Request, Response } from "express"
 import { coordObj } from "../queries/script.js"
 
 export const getCharacterForCoord = async (req: Request, res: Response) => {

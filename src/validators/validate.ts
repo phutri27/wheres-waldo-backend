@@ -1,5 +1,5 @@
 import { body } from "express-validator"
-import { scoreboardObj } from "../queries/script"
+import { scoreboardObj } from "../queries/script.js"
 
 const emptyMsg = "must not be empty"
 

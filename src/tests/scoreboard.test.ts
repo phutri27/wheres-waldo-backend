@@ -1,7 +1,7 @@
 import app from "./root";
 import { describe, expect, test, beforeEach } from "vitest";
 import request from "supertest"
-import { prisma } from "../lib/prisma";
+import { prisma } from "../lib/prisma.js";
 
 describe("scoreboard routes work", () => {
     beforeEach(async () => {

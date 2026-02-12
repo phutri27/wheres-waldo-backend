@@ -1,6 +1,6 @@
-import { Request, Response } from "express"
-import { scoreboardObj } from "../queries/script"
-import { validateUsernane } from "../validators/validate"
+import type { Request, Response } from "express"
+import { scoreboardObj } from "../queries/script.js"
+import { validateUsernane } from "../validators/validate.js"
 import { validationResult, matchedData, Result } from "express-validator"
 
 export const addToScoreboard = [...validateUsernane, 
